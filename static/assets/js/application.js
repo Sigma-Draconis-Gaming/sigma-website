@@ -23,7 +23,11 @@ $(document).ready(() => {
 
     socket.on('server_update', msg => {
         let {server} = msg;
-        console.log(server.name);
+        console.log(server.name.split(" ")[0]);
         $(`#${server.name.replace(/\s+/g, '')}`).html(`<b>${server.name}: ${server.ip} </b><br><b><status-indicator ${get_status(server)} pulse></status-indicator> Status:  </b> <b>  Ping</b>: ${server.ping} <a href="steam://connect/${server.ip}" class="button primary small fit icon solid fa-user">${server.players}/${server.max_players} Join!</a>`)
     });
+
+     socket.on('scores_update', msg => {
+          let {scores} = msg;
+         console.log(scores)});
 });
