@@ -45,7 +45,7 @@
             <ul>
                 <li><b><a class="page-scroll" href="#one">Space Engineers</a></b></li>
                 <li><b><a class="page-scroll" href="#two">Ark</a></b></li>
-                <li><b><a class="page-scroll" href="#three">7D2D</a></b></li>
+{#                <li><b><a class="page-scroll" href="#three">7D2D</a></b></li>#}
                 <li><b><a target="_blank" href="{{ discord.invite }}" class="button primary icon fa-user">{{ discord.online }} Discord</a></b></li>
             </ul>
         </nav>
@@ -117,24 +117,24 @@
     </section>
 
     <!-- Three -->
-    <section id="three" class="spotlight style3 left">
-        <span class="image fit main bottom"><img src="/static/images/pic04.jpg" alt=""/></span>
-        <div class="content">
-            <header>
-                <h2>7 Days 2 Die</h2>
-            </header>
-             <ul class="alt" >
-                        {% for server in servers["7d2d"] %}
-                            <li id={{ server.name|replace(" ", "") }}>  <b>{{ server.name }}: {{ server.ip }} </b><br><b><status-indicator positive pulse></status-indicator> Status:  </b> <b>  Ping</b>: {{ server.ping }} <a href="steam://connect/{{ server.ip }}" class="button primary small fit icon solid fa-user">{{ server.players }}/{{ server.max_players }} Join!</a></li>
-                        {% endfor %}
-                    </ul>
-            <ul class="actions">
-                <li><a target="_blank" href="https://wiki.sigmadraconis.games/en/7-Days-To-Die" class="button">7D2D
-                    Draconis Wiki</a></li>
-            </ul>
-        </div>
-        <a href="#four" class="goto-next scrolly">Next</a>
-    </section>
+{#    <section id="three" class="spotlight style3 left">#}
+{#        <span class="image fit main bottom"><img src="/static/images/pic04.jpg" alt=""/></span>#}
+{#        <div class="content">#}
+{#            <header>#}
+{#                <h2>7 Days 2 Die</h2>#}
+{#            </header>#}
+{#             <ul class="alt" >#}
+{#                        {% for server in servers["7d2d"] %}#}
+{#                            <li id={{ server.name|replace(" ", "") }}>  <b>{{ server.name }}: {{ server.ip }} </b><br><b><status-indicator positive pulse></status-indicator> Status:  </b> <b>  Ping</b>: {{ server.ping }} <a href="steam://connect/{{ server.ip }}" class="button primary small fit icon solid fa-user">{{ server.players }}/{{ server.max_players }} Join!</a></li>#}
+{#                        {% endfor %}#}
+{#                    </ul>#}
+{#            <ul class="actions">#}
+{#                <li><a target="_blank" href="https://wiki.sigmadraconis.games/en/7-Days-To-Die" class="button">7D2D#}
+{#                    Draconis Wiki</a></li>#}
+{#            </ul>#}
+{#        </div>#}
+{#        <a href="#four" class="goto-next scrolly">Next</a>#}
+{#    </section>#}
 
     <!-- Four -->
     <section id="four" class="wrapper style1 special fade-up">
