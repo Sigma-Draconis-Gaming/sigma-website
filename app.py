@@ -33,12 +33,17 @@ def index():
                            "version": 0}
             servers[cat].append(server_json)
     print(servers)
-    return render_template('index.html', servers=servers, discord=discord)
+    return render_template('index.html', servers=servers, discord=discord, onlinese=50, onlineark=50)
 
 
-# @app.route('/e')
-# def e():
-#     return render_template('elements.html')
+@app.route('/e')
+def e():
+    return render_template('elements.html')
+
+
+@app.route('/koth')
+def koth():
+    return render_template('koth.html')
 
 
 if __name__ == '__main__':
