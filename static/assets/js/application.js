@@ -30,4 +30,10 @@ $(document).ready(() => {
      socket.on('scores_update', msg => {
           let {scores} = msg;
          console.log(scores)});
+
+     socket.on('online_update', msg => {
+         console.log(msg);
+      $(`#${msg.id_key}`).html(`<b>Total Online: ${msg.count}</b>`)
+
+     });
 });
